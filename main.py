@@ -1,14 +1,9 @@
-global wprize
-wprize = None
-
 from libs.custom_exceptions import UserAlreadyEnteredError, NoUsersEnteredError, WrongTimeFormatError
 from discord_slash.utils.manage_commands import create_permission
 from discord_slash.model import SlashCommandPermissionType
 from discord_slash import SlashCommand
 from discord.ext import commands
-from datetime import datetime
 import libs.parsetime as pt
-from threading import Timer
 import libs.database as db
 from random import choice
 from libs import poster

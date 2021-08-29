@@ -1,5 +1,5 @@
 from tinydb import TinyDB
-from libs.custom_exceptions import UserAlreadyEnteredError, NoUsersEnteredError
+from libs.custom_exceptions import UserAlreadyEnteredError, NoUsersEnteredError # ./custom_exceptions.py
 from datetime import datetime
 import time
 

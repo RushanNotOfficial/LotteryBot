@@ -1,6 +1,6 @@
 from libs.custom_exceptions import WrongTimeFormatError
 
-def parse(time: str):
+def parse(time: str):   # for user comfort
     timeinseconds: int = 0
     if time.endswith("s"):
         timeinseconds = int(time.replace("s",""))
