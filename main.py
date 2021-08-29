@@ -10,7 +10,7 @@ from libs import poster
 import discord
 import asyncio
 
-intents = discord.Intents().all()
+intents = discord.Intents().all() # idk why
 client = commands.Bot(command_prefix="!", help_command=None, intents=intents)
 slash = SlashCommand(client, sync_commands=True)
 guild_ids = [869618049064525904]
@@ -26,12 +26,6 @@ async def get_lottery_result(wp):
         await poster.post_nowinnerended(client=client, guild_id=869618049064525904, member_id=881137802245472266, channel_name="lottery-posters", prize=wp)
     db.stop_raffle()
     db.remove_all()
-
-def between_callback():
-    client_loop = asyncio.new_event_loop()
-    send_fut = asyncio.run_coroutine_threadsafe(get_lottery_result(), client_loop)
-    # wait for the coroutine to finish
-    send_fut.result()
 
 @slash.slash(name="startraffle", description="This starts a raffle for a prize", guild_ids=guild_ids, permissions={
     869618049064525904: [
