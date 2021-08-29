@@ -10,7 +10,7 @@ from libs import poster
 import discord
 import asyncio
 
-intents = discord.Intents().all() # idk why
+intents = discord.Intents().all() # idk why I did it
 client = commands.Bot(command_prefix="!", help_command=None, intents=intents)
 slash = SlashCommand(client, sync_commands=True)
 guild_ids = [869618049064525904]
