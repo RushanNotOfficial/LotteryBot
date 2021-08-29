@@ -9,7 +9,9 @@ from random import choice
 from libs import poster
 import discord
 import asyncio
+import os
 
+TOKEN = os.getenv("DISCORD_TOKEN")
 intents = discord.Intents().all() # idk why I did it
 client = commands.Bot(command_prefix="!", help_command=None, intents=intents)
 slash = SlashCommand(client, sync_commands=True)
