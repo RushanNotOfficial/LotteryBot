@@ -1,3 +1,0 @@
-discord
-tinydb
-discord-py-interactions
