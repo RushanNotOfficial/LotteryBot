@@ -30,7 +30,7 @@ def get_all_values():
         raise NoUsersEnteredError
 
 def remove_all():
-    db.truncate()
+    db.truncate() # makes no sense (you could just call it without remove_all(). Just return db object) to me but okay?
 
 def start_raffle():
     with open('data/raffles.status', 'w+') as file:

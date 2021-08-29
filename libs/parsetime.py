@@ -13,5 +13,5 @@ def parse(time: str):   # for user comfort
     elif time.endswith("w"):
         timeinseconds = int(time.replace("w","")) * 604800
     else:
-        raise WrongTimeFormatError
+        raise WrongTimeFormatError # see what I mean ?
     return timeinseconds

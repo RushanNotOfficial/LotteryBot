@@ -7,4 +7,4 @@ class NoUsersEnteredError(Exception):
 class WrongTimeFormatError(Exception):
     pass
 
-#just for readability
+#custom error just for readability
